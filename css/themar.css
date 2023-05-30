@@ -1,0 +1,325 @@
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+body {
+    min-height: 2000px;
+}
+
+#header {
+    transition: all 0.5s;
+    z-index: 999;
+    padding: 15px 0;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.08);
+    top: 0;
+    max-height: 100vh;
+}
+
+.custom-container {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.language-select {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #B5B5B5;
+    border-right: 1px solid #C7C7C7;
+    padding-right: 25px;
+}
+
+.language-link {
+    display: inline-block;
+    text-decoration: none;
+    color: #B5B5B5;
+    border-bottom: 1px solid #C7C7C7;
+    padding-bottom: 10px;
+}
+
+.notification {
+    padding-left: 25px;
+}
+
+.user-div {
+    padding-right: 150px;
+}
+
+.user-info {
+    padding-top: 3px;
+    padding-right: 10px;
+    line-height: 6px;
+}
+
+.user-info h6 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #1C2E5A;
+}
+
+.user-info p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #C7C7C7;
+}
+
+/* ============start sidebar===========  */
+.container-page {
+    display: flex;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 140px 15px 3px 50px;
+    background-color: #F8F8F8;
+    width: 250px;
+    height: 100vh;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding-bottom: 60px;
+
+}
+
+.sidebar-menu .sidebar-list {
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+.sidebar-menu .sidebar-item {
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.sidebar-menu .sidebar-text {
+    color: #7E7E7E;
+}
+
+.sidebar-menu li a:hover {
+    text-decoration: none;
+    color: #26B195;
+}
+.logout{
+    position: fixed;
+    bottom: 10px;
+    right:20px;
+    width:200px;
+}
+.logout span{
+    color: #EE4D42 !important;
+
+}
+
+
+/* ============End sidebar===========  */
+
+.content {
+    position: relative;
+    flex: 1;
+    padding-top: 125px;
+    padding-right: 250px; /* Adjusted from "padding-left" to "padding-right" */
+
+}
+
+.content .main-container {
+    width: 100%;
+    padding-right: 100px;
+    padding-left: 100px;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+.title-sec {
+    text-align: right;
+}
+
+.main-title {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 52px;
+    text-align: right;
+    color: #26B195;
+
+}
+.main-title a{
+    color: #7E7E7E;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+}
+.content .inst-title {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 34px;
+    color: #1C2E5A;
+    padding-top: 50px;
+}
+
+
+/* start stepper */
+.stepper-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    margin: 0 auto 8rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    padding-top: 2.5rem;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+    position: relative;
+}
+
+.step-num {
+    font-size: 0.9rem;
+    color: #7e7e7e;
+}
+
+.step-circle {
+    box-sizing: content-box;
+    width: 1.125rem;
+    height: 1.125rem;
+    border-radius: 50%;
+    background-color: #7e7e7e;
+    margin: 0 auto;
+    border: none;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.step-circle path {
+    fill: #7e7e7e;
+}
+
+.step-line {
+    flex-grow: 1;
+    height: 5px;
+    background-color: #e9e9e9;
+    margin-top: 1.6rem;
+}
+
+.active-step .step-circle {
+    border: #cfeee8 5px solid;
+    background-color: #26b195;
+}
+
+.active-step .step-num,
+.active-step .step-title {
+    color: #26b195;
+}
+
+.active-step .step-circle path {
+    fill: #fff;
+}
+
+/* style the line div directly after the active step */
+.active-step + .step-line {
+    background-color: #26b195;
+}
+
+.step-title {
+    position: absolute;
+    top: 3.5rem;
+    font-size: 0.9rem;
+    color: #7e7e7e;
+    font-weight: 700;
+    text-align: center;
+    min-width: 132px;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.current-step .step-circle {
+    border: none;
+    background-color: #26b195;
+}
+
+.current-step .step-num,
+.current-step .step-title {
+    color: #26b195;
+}
+
+.current-step .step-circle path {
+    fill: #26b195;
+}
+
+@media (max-width: 1200px) {
+    .stepper-container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        width: 100%;
+    }
+
+    .step-title {
+        font-size: 0.8rem;
+        min-width: 100px;
+    }
+}
+
+/* MEDIA */
+@media (max-width: 768px) {
+    .stepper-container {
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+    }
+
+    .step-title {
+        font-weight: 400;
+        min-width: fit-content;
+        padding-left: 0.3rem;
+        padding-right: 0.3rem;
+    }
+}
+
+/* end stepper */
+
+
+/* start form */
+
+
+.hold-form {
+    margin: 30px 0;
+}
+
+.hold-form .form-control,
+.hold-form .form-control::placeholder {
+    color: #1c2e5aa2;
+    font-size: 16px;
+}
+
+
+.inputs-50 .form-group,
+.inputs-50 .input-group {
+    width: 60%;
+}
+
+.hold-form .form-group .form-control,
+.hold-form .input-group .form-control {
+    color: #1c2e5a;
+    min-height: 50px !important;
+    padding: 5px 15px;
+    background-color: #F1F1F1;
+    box-shadow: none;
+    border: 1px solid var(--mainColor);
+    box-shadow: none;
+    border-radius: 25px;
+}
+
