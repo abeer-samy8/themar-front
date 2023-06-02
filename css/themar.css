@@ -1,9 +1,22 @@
+
+
+ul {
+    list-style: none;
+    text-decoration: none;
+}
+
+
+body {
+    direction: rtl;
+    font-family: 'Cairo', sans-serif;
+    line-height: 30px;
+    font-weight: 400;
+
+}
+
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
-body {
-    min-height: 2000px;
-}
 
 #header {
     transition: all 0.5s;
@@ -18,6 +31,14 @@ body {
 .custom-container {
     padding-left: 50px;
     padding-right: 50px;
+}
+
+
+.sidebar-btn {
+    color:white ;
+    background: #1C2E5A;
+    /*padding-right: 40px;*/
+    /*padding-top: 20px;*/
 }
 
 .language-select {
@@ -66,96 +87,131 @@ body {
     color: #C7C7C7;
 }
 
-/* ============start sidebar===========  */
+/* ============start sidebar=========== */
 .container-page {
     display: flex;
 }
 
-.sidebar {
+.navbar {
     position: fixed;
     top: 0;
     right: 0;
-    padding: 140px 15px 3px 50px;
+    padding-top: 140px;
+    padding-left: 15px;
     background-color: #F8F8F8;
     width: 250px;
     height: 100vh;
 }
 
-.sidebar-menu {
+.navv{
     list-style: none;
     padding-bottom: 60px;
-
+    border-bottom: 1px solid #C7C7C7;
 }
 
-.sidebar-menu .sidebar-list {
+.nav-item{
     margin-bottom: 10px;
-    text-align: right;
+    padding-right: 0;
 }
-
-.sidebar-menu .sidebar-item {
+.nav-link{
     text-decoration: none;
     font-weight: 400;
     font-size: 16px;
     line-height: 30px;
 }
-
-.sidebar-menu .sidebar-text {
-    color: #7E7E7E;
+.nav-item .nav-link span {
+    padding-right: 5px;
 }
-
-.sidebar-menu li a:hover {
-    text-decoration: none;
-    color: #26B195;
+.sidebar-text{
+    color:  #7E7E7E;
 }
-.logout{
+.logout {
     position: fixed;
     bottom: 10px;
-    right:20px;
-    width:200px;
+    width: 200px;
 }
-.logout span{
+
+.logout span {
     color: #EE4D42 !important;
+    text-decoration: none;
 
 }
+@media (max-width: 767.98px) {
+    .navbar {
+        width: 100%;
+        /*padding-top: 150px;*/
+        padding: 110px 50px 15px 15px;
+        height: auto;
+
+    }
+
+    .logout {
+        position: static;
+        margin-top: 20px;
+    }
+}
+
 
 
 /* ============End sidebar===========  */
 
-.content {
-    position: relative;
-    flex: 1;
-    padding-top: 125px;
-    padding-right: 250px; /* Adjusted from "padding-left" to "padding-right" */
-
-}
 
 .content .main-container {
     width: 100%;
     padding-right: 100px;
-    padding-left: 100px;
+    padding-left: 20px;
     margin-right: auto;
     margin-left: auto;
 
 }
 
-.title-sec {
-    text-align: right;
+.content {
+    /*position: relative;*/
+    flex: 1;
+    padding-top: 125px;
+    padding-right: 250px;
+    /*padding-bottom: 20px;*/
+}
+
+@media (max-width: 767.98px) {
+    .content {
+        padding-top: 200px;
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .content .main-container {
+        width: 100%;
+        text-align: center;
+        padding-right: 20px;
+        margin-right: auto;
+        margin-left: auto;
+        background: white;
+
+    }
+
 }
 
 .main-title {
     font-weight: 400;
     font-size: 28px;
     line-height: 52px;
-    text-align: right;
     color: #26B195;
 
 }
-.main-title a{
-    color: #7E7E7E;
+
+.title-sec .link {
+    text-decoration: none;
+    color: #7E7E7E !important;
     font-weight: 400;
     font-size: 16px;
     line-height: 30px;
 }
+
+.title-sec span {
+    color: #26B195;
+}
+
 .content .inst-title {
     font-weight: 600;
     font-size: 18px;
@@ -165,7 +221,7 @@ body {
 }
 
 
-/* start stepper */
+/* ==============start stepper=========== */
 .stepper-container {
     display: flex;
     justify-content: space-between;
@@ -274,7 +330,6 @@ body {
     }
 }
 
-/* MEDIA */
 @media (max-width: 768px) {
     .stepper-container {
         padding-left: 1.2rem;
@@ -289,10 +344,10 @@ body {
     }
 }
 
-/* end stepper */
+/*============ end stepper =========*/
 
 
-/* start form */
+/*============= start form========== */
 
 
 .hold-form {
@@ -306,9 +361,23 @@ body {
 }
 
 
+.hold-form .form-group,
+.hold-form .input-group {
+    margin-bottom: 20px;
+}
+
+
 .inputs-50 .form-group,
 .inputs-50 .input-group {
-    width: 60%;
+    width: 50%;
+}
+
+.hold-form .form-group label {
+    padding-bottom: 15px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    color: #1C2E5A;
 }
 
 .hold-form .form-group .form-control,
@@ -318,8 +387,235 @@ body {
     padding: 5px 15px;
     background-color: #F1F1F1;
     box-shadow: none;
-    border: 1px solid var(--mainColor);
-    box-shadow: none;
+    border: 1px solid #26B195;
     border-radius: 25px;
+}
+
+.form-foot {
+    margin-bottom: 3.5rem;
+    padding-top: 20px;
+    width: 50%;
+    padding-right: 10px;
+}
+
+@media (max-width: 767.98px) {
+    .form-foot {
+        width: auto;
+    }
+}
+
+.checkbox-container {
+    gap: 0.5rem;
+    padding-bottom: 10px;
+
+}
+
+.checkbox-container input {
+    margin-top: 5px;
+    width: 1.1rem;
+    height: 1.1rem;
+    border: 1px solid #26b195;
+}
+
+.checkbox-container label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    color: #080D1B;
+
+}
+
+.toggle {
+    padding-bottom: 10px;
+}
+
+.toggle label {
+    padding-left: 10px
+}
+
+input[type="checkbox"]:checked {
+    border-color: #26B195;
+}
+
+input[type="checkbox"] {
+    /* Hide the default checkbox */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    /* Create a custom checkbox */
+    width: 16px;
+    height: 16px;
+    border: 1px solid #26B195;
+    outline: none;
+}
+
+input[type="checkbox"]:checked {
+    border-color: #26B195;
+}
+
+input[type="checkbox"]:checked:before {
+    content: "✔";
+    display: block;
+    line-height: 14px;
+    text-align: center;
+    color: white;
+    background: #26B195;
+}
+
+input[type="radio"] {
+    /* Hide the default radio button */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    /* Create a custom radio button */
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 1px solid #26B195;
+    outline: none;
+}
+
+input[type="radio"]:checked,
+input[type="radio"]:checked + label {
+    /* Change the border color of the checked radio button */
+    border-color: #26B195;
+}
+
+input[type="radio"]:checked + label {
+    /* Change the color of the label when the radio button is checked */
+    color: #26B195;
+}
+
+input[type="radio"]:checked:before {
+    /* Add a dot inside the checked radio button */
+    content: "";
+    display: block;
+    width: 8px;
+    height: 8px;
+    background-color: #26B195;
+    border-radius: 50%;
+    margin: 3px auto;
+}
+
+.button-container {
+    display: flex;
+    padding-bottom: 100px;
+}
+
+.prev-btn {
+    background: #FFFFFF;
+    color: black;
+    border: none;
+    padding: 10px 55px;
+    border-radius: 27.5px;
+    margin-right: 10px;
+}
+
+.next-btn {
+    background: #26B195;
+    border-radius: 27.5px;
+    color: white;
+    border: none;
+    padding: 10px 55px;
+}
+
+
+/* ===========start footer ===========*/
+.footer {
+    padding: 50px 0;
+}
+
+.footer-container {
+    width: 100%;
+    padding-right: 100px;
+    padding-left: 100px;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+.footer .contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 5px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #D8D8D8;
+    padding-top: 30px;
+    margin-left: 20px;
+
+
+}
+
+.footer .contact .info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 24px;
+    color: #7E7E7E;
+}
+
+.foot-content {
+    color: #676767;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+
+}
+
+.footer .copyright {
+    color: #676767;
+    margin-bottom: 0;
+    font-size: 14px;
+    width: 120%;
+}
+
+.media {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contact-us {
+    text-decoration: none;
+}
+
+.active {
+    color: #26B195;
+}
+
+.links-menu {
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.links-menu a {
+    font-size: 14px;
+    color: #26B195;
+    transition: .3s;
+    opacity: 1;
+    text-decoration: none;
+
+}
+
+
+@media (min-width: 768px) {
+    .contact {
+        flex-wrap: nowrap;
+    }
+
+    .info {
+        flex: 0 0 auto;
+        margin-bottom: 0;
+    }
+
+    .social-media {
+        flex: 0 0 auto;
+    }
 }
 
